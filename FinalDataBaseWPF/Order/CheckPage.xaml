@@ -1,0 +1,41 @@
+﻿<Page x:Class="FinalDataBaseWPF.Order.CheckPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FinalDataBaseWPF.Order"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CheckPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="1" Grid.Row="7" Content="Добавить" Margin="5" Background="#FFF67D7D" BorderBrush="{x:Null}" FontFamily="PT Serif" Height="25" Click="Button_Click_1" />
+        <Button Grid.Column="2" Grid.Row="7" Content="Изменить" Margin="5" Background="#FFF67D7D" BorderBrush="{x:Null}" FontFamily="PT Serif" Height="25" Click="Button_Click_3" />
+        <Button Grid.Column="3" Grid.Row="7" Content="Удалить" Margin="5" Background="#FFF67D7D" BorderBrush="{x:Null}" FontFamily="PT Serif" Height="25" Click="Button_Click_2" />
+        <Button Grid.Column="0" Grid.Row="7" Content="Оплатить и выгрузить чек" Margin="5" Background="#FFF67D7D" BorderBrush="{x:Null}" FontFamily="PT Serif" Height="25" Click="Button_Click" />
+        <DataGrid x:Name="checkList" Grid.RowSpan="7" Background="{x:Null}" Margin="5" FontFamily="PT Serif" SelectionChanged="checkList_SelectionChanged" />
+        <TextBlock Grid.ColumnSpan="3" Grid.Column="1" Margin="5" Text="Данные для заполнения" FontFamily="PT Serif" HorizontalAlignment="Center" Height="25"/>
+        <ComboBox x:Name="orderBox" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="1" FontFamily="PT Serif" Margin="5" materialDesign:HintAssist.Hint="Номер заказа" Height="25" SelectionChanged="orderBox_SelectionChanged"/>
+        <Label x:Name="sum" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="2" FontFamily="PT Serif" Margin="5" materialDesign:HintAssist.Hint="Сумма" Height="25"/>
+        <TextBox x:Name="contrTbx" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="3" Height="25" FontFamily="PT Serif" Margin="5" materialDesign:HintAssist.Hint="Внесенно" />
+        <TextBox x:Name="OddTbx" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="4" Height="25" FontFamily="PT Serif" Margin="5" materialDesign:HintAssist.Hint="Сдача" />
+        <DatePicker x:Name="datePicker" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="5" Height="25" FontFamily="PT Serif" Margin="5" materialDesign:HintAssist.Hint="Дата чека" SelectedDateChanged="datePicker_SelectedDateChanged"/>
+    </Grid>
+</Page>

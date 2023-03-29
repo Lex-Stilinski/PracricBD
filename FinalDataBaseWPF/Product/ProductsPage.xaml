@@ -1,0 +1,46 @@
+﻿<Page x:Class="FinalDataBaseWPF.Product.ProductsPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FinalDataBaseWPF.Product"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProductsPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="1" Grid.Row="10" Content="Добавить" Margin="5" Background="#FFF67D7D" BorderBrush="{x:Null}" FontFamily="PT Serif" Height="25" Click="Button_Click"/>
+        <Button Grid.Column="2" Grid.Row="10" Content="Изменить" Margin="5" Background="#FFF67D7D" BorderBrush="{x:Null}" FontFamily="PT Serif" Height="25" Click="Button_Click_2"/>
+        <Button Grid.Column="3" Grid.Row="10" Content="Удалить" Margin="5" Background="#FFF67D7D" BorderBrush="{x:Null}" FontFamily="PT Serif" Height="25" Click="Button_Click_1"/>
+        <DataGrid x:Name="productsList" Grid.RowSpan="11" Background="{x:Null}" Margin="5" FontFamily="PT Serif" SelectionChanged="producrsList_SelectionChanged"/>
+        <TextBlock Grid.ColumnSpan="3" Grid.Column="1" Margin="5" Text="Данные для заполнения" FontFamily="PT Serif" HorizontalAlignment="Center" Height="25"/>
+        <TextBox x:Name="nameTbx" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="1" FontFamily="PT Serif" Margin="5" materialDesign:HintAssist.Hint="Название товара" Height="25"/>
+        <ComboBox x:Name="labelBox" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="2" FontFamily="PT Serif" Margin="5" materialDesign:HintAssist.Hint="Лейбл" Height="25" SelectionChanged="labelBox_SelectionChanged"/>
+        <ComboBox x:Name="genreBox" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="3" FontFamily="PT Serif" Margin="5" materialDesign:HintAssist.Hint="Жанр" Height="25" SelectionChanged="genreBox_SelectionChanged"/>
+        <ComboBox x:Name="groupeBox" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="4" FontFamily="PT Serif" Margin="5" materialDesign:HintAssist.Hint="Группа" Height="25" SelectionChanged="groupeBox_SelectionChanged"/>
+        <ComboBox x:Name="typeBox" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="5" FontFamily="PT Serif" Margin="5" materialDesign:HintAssist.Hint="Тип альбома" Height="25" SelectionChanged="typeBox_SelectionChanged"/>
+        <ComboBox x:Name="yearBox" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="6" FontFamily="PT Serif" Margin="5" materialDesign:HintAssist.Hint="Год релиза" Height="25" SelectionChanged="yearBox_SelectionChanged"/>
+        <TextBox x:Name="quantTbx" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="7" FontFamily="PT Serif" Margin="5" materialDesign:HintAssist.Hint="Количество" Height="25"/>
+        <TextBox x:Name="priceTbx" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="8" FontFamily="PT Serif" Margin="5" materialDesign:HintAssist.Hint="Цена" Height="25"/>
+    </Grid>
+</Page>
